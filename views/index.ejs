@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta property="qc:admins" content="4562636714562571563145" />
+    <meta name="referrer" content="never">
+    <title>便利贴</title>
+    <link rel="stylesheet" href="styleSheets/common.css">
+  <link rel="stylesheet" href="styleSheets/index.css">
+  <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <a class="add-note" title="添加笔记" href="#"><span class="fa fa-plus"></span> 添加</a>
+      <button class="btn">一键整理</button>
+      <ul class="user-area">
+       <% if (isLogin){ %>
+          <li><img src="<%= user.avatar %>" alt=""></li>
+          <li><span title="<%= user.username %>"><%= user.username %></span></li>
+          <li><span class="line"> | </span> </li>
+          <li><a class="logout" href="/auth/logout">注销</a></li>
+        <%} else { %>
+          <li><a class="login" title="GitHub登录" href="/auth/github"> GitHub登录</a>
+          </li>
+          <li><a class="login" title="饥人谷登录" href="/auth/jirengu">饥人谷登录</a>
+          </li>
+        <% } %>
+      </ul>
+
+    </div>
+    <div id="content">
+      <div class="wrap-music">
+        <section id="page-music">
+          <main class="layout">
+            <div class="aside">
+              <figure></figure>
+              <div class="actions">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-lover"></use>
+                </svg>
+                <svg class="btn-play icon" aria-hidden="true">
+                  <use xlink:href="#icon-play"></use>
+                </svg>
+                <svg class="btn-pause icon" aria-hidden="true">
+                  <use xlink:href="#icon-pause"></use>
+                </svg>
+                <svg class="btn-next icon" aria-hidden="true">
+                  <use xlink:href="#icon-next"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="detail">
+              <span class="tag">90后</span>
+              <h1>It's a new day</h1>
+              <ul class="icons">
+                <li class="item">
+                  <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-erji"></use>
+                  </svg>
+                  <span>233</span>
+                </li>
+                <li class="item">
+                  <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-lover"></use>
+                  </svg>
+                  <span>666</span>
+                </li>
+                <li class="item">
+                  <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zan"></use>
+                  </svg>
+                  <span>999</span>
+                </li>
+              </ul>
+              <div class="area-bar">
+                <div class="bar">
+                  <div class="bar-progress"></div>
+                </div>
+                <div class="current-time">1:02</div>
+              </div>
+              <div class="author">周杰伦</div>
+              <div class="lyric">
+                <p>hello world</p>
+              </div>
+            </div>
+          </main>
+          <footer>
+            <div class="layout">
+              <span class="iconfont icon-left">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-arrow-left"></use>
+                </svg>
+              </span>
+              <span class="iconfont icon-right">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+              </span>
+              <div class="box">
+                <ul>
+
+                </ul>
+              </div>
+            </div>
+          </footer>
+        </section>
+        <section id="page-cover"></section>
+        <div class="bg"></div>
+      </div>
+      <div class="notes">
+        
+      </div>
+    </div>
+
+    <div class="stars"></div>
+    <script src="//at.alicdn.com/t/font_498617_nwkj86gmmftotj4i.js"></script>
+    <script src="/js/index.js"></script>
+<!--     <div class="twinkling"></div> -->
+  </body>
+</html>
